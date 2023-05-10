@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>UK road usage</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://unpkg.com/d3-simple-slider"></script>
+	<script src= "d3-hexjson.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <h1>UK road usage by traffic volume</h1>
+	<h3>Traffic estimates are provided in units of ‘vehicle kilometre/mile’: One vehicle multiplied by one kilometre/mile travelled</h3>
+	<p><i>Vehicle kilometre/mile:</i> One vehicle multiplied by one kilometre/mile travelled (vehicle kilometres/miles are calculated by multiplying the AADF by the corresponding length of road). For example, one vehicle travelling one kilometre/mile a day for a year would be 365 vehicle kilometres/miles.
+	<br> <i>Annual Average Daily Flow (AADF):</i> The average over a full year of the number of vehicles passing a point in the road network each day.  </p>
+	<div id='container'>
+		<!--split area into columns -->
+		<div id="col-left" style="display=block">
+			<!-- placeholders for elements on page -->
+			<span id="menu">Filter by vehicle type: </span>
+			<div id="checkbox-hex"></div>
+			<div id="checkbox-pop"></div>
+			<svg id="map_svg" width="350" height="400"></svg>
+			<p id="value-time"></p>
+			<div id="slider-time"></div>
+			<div id="tooltip"></div>
+		</div>
+		<div id="col-right" style="display=block">
+			<svg id="bar_svg" width="480" height="300"></svg>
+			<div id="checkbox-log"></div>
+			<svg id="region_svg" width="480" height="300"></svg>
+		</div>
+	</div>
+
+    <div class="source">
+      Sources: 
+	  <br> Data from <a href="https://www.data.gov.uk/dataset/208c0e7b-353f-4e2d-8b7a-1a7118467acc/gb-road-traffic-counts"> data.gov.uk/dataset/208c0e7b-353f-4e2d-8b7a-1a7118467acc/gb-road-traffic-counts</a>
+	  <br>Office for National Statistics licensed under the Open Government Licence v.3.0
+      <br>Contains OS data © Crown copyright and database right 2023
+	  <a href="https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2022-gb-bgc/about"> <br> Regions GeoJSON</a>
+	  <a href="https://geoportal.statistics.gov.uk/datasets/ons::regions-december-2022-en-bgc/about"> <br> Countries GeoJSON</a>
+    </div>
+
+
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

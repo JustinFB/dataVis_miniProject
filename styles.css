@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  padding: 30px;
+  background: #f7f7f7;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#container {
+  display: flex;
+}
+#col-left {
+  width: 350px;
+  margin-right: 45px;
+}
+#col-right {
+  width: 400px;
+}
+
+/* change cursor to show elements that can be clicked */
+.area{
+	cursor: pointer;
+}
+
+.barchart line {
+  fill: none;
+  stroke: #ddd;
+}
+.bar{
+	cursor: pointer
+}
+
+.axis-title {
+  font-size: 12px;
+  fill: #8E8883;
+}
+
+.x-axis text{
+	font-size: 10px;
+}
+
+.barchart path {
+  display: none;
+}
+
+/* tooltip styling */
+#tooltip {
+  position: absolute;
+  display: none;
+  background: #fff;
+  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+  border: 1px solid #ddd;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 8px;
+  min-width: 100px;
+  color: #333;
+}
+.tooltip-title {
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+#tooltip ul {
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+}
+
+.source {
+  font-size: 10px;
+  color: #888;
+}
+.source a {
+  color: #888;
+}
